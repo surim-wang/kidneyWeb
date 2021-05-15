@@ -11,6 +11,6 @@
   <?php var_dump("2");?><br>
   <?php var_dump(1==1);?><br>
   <?php var_dump(2>1);?><br>
-  <?php var_dump(1>=1);?><br>
+  <?php var_dump(1>=s1);?><br>
   </body>
 </html>
