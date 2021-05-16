@@ -1,23 +1,16 @@
-<?php
-require('lib/print.php');
-require('view/top.php');
-?>
-      <a href="create.php">create</a>
-    <?php if(isset($_GET['id'])){ ?>
-        <a href="update.php?id=<?= $_GET['id']; ?>">update</a>
-        <form action="delete_process.php" method='post'>
-          <input type="hidden" name="id" value="<?=$_GET['id']?>">
-          <input type="submit" value="delete">
-        </form>
-      <?php } ?>
-    <h2>
-      <?php
-      print_title();
-      ?>
-    </h2>
-     <?php
-    print_description();
-     ?>
-<?php
-require('view/bottom.php');
-?>
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>WEB</title>
+  </html>
+  <body>
+    <h1>WEB</h1>
+    <ol>
+      <li>HTML</li>
+    </ol>
+    <h2>Welcome</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+  </body>
+
+</html>
