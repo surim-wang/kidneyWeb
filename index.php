@@ -1,22 +1,23 @@
+<html>
+  <head>
+      <title>Upload Image</title>
+      <meta charset="utf-8">
+  </head>
 
-<!DOCTYPE html>
-<html lang = "en-US">
-<head>
-    <title>Upload Image</title>
-    <meta charset="utf-8">
-</head>
+  <body>
+    <center>
+    <h1>Upload image</h1>
+      <form action = "uploadImage.php" method="POST" enctype="multipart/form-data">
 
-<body>
-  <?php if(!empty($statusMsg)){ ?>
-      <p class="status-msg"><?= $statusMsg; ?></p>
-  <?php } ?>
-  <form action = "upload.php" method="post" enctype="multipart/form-data">
-      Select Image File to Upload;
-      <input type="file" name="file">
-      <input type="submit" name="submit" value="Upload">
-  </form>
+        <label>Select Image File to Upload: </label>
+        <input type="file" name="image" id="image" /><br>
 
+        <label>Enter description: </label>
+        <input type="text" name="desc" placeholder="Enter Description"/><br>
 
+        <input type="submit" name="Upload" value="Upload Image"/><br>
 
-</body>
+      </form>
+  </center>
+  </body>
 </html>

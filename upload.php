@@ -40,6 +40,6 @@ echo $statusMsg;
     <ul class="nav navbar-nav">
         <li><a href="home.php"><button>home</button></a></li>
         <li><a href="imageShow.php"><button>imageList</button></a></li>
-        <li><a href="imageShow.php"><button>Show image</button></a></li>
+        <li><a href="imageOpen.php"><button>Show image</button></a></li>
     </ul>
 </div>
