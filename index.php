@@ -1,16 +1,22 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>WEB</title>
-  </html>
-  <body>
-    <h1>WEB</h1>
-    <ol>
-      <li>HTML</li>
-    </ol>
-    <a href="create.php">create</a>
-    <h2>Welcome</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-  </body>
+
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <title>Upload Image</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+  <?php if(!empty($statusMsg)){ ?>
+      <p class="status-msg"><?= $statusMsg; ?></p>
+  <?php } ?>
+  <form action = "upload.php" method="post" enctype="multipart/form-data">
+      Select Image File to Upload;
+      <input type="file" name="file">
+      <input type="submit" name="submit" value="Upload">
+  </form>
+
+
+
+</body>
 </html>
