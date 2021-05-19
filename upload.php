@@ -39,6 +39,7 @@ echo $statusMsg;
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
         <li><a href="home.php"><button>home</button></a></li>
-        <li><a href="home.php"><button>Show images</button></a></li>
+        <li><a href="imageShow.php"><button>imageList</button></a></li>
+        <li><a href="imageShow.php"><button>Show image</button></a></li>
     </ul>
 </div>
