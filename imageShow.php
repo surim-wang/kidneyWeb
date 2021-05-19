@@ -3,13 +3,13 @@
 // Include the database configuration file
 include 'dbConfig.php';
 
-$query = "SELECT * FROM images";
+$query = "SELECT * FROM photo";
 $result = mysqli_query($db, $query);
 
 while($row = mysqli_fetch_array($result)){
   //print list
   echo 'file_name : ';
-  print_r($row['file_name']);
+  print_r($row['']);
   echo '<br>';
   //var_dump($row);
 };
