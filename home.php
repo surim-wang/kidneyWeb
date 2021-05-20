@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang = "en-US">
   <head>
-      <title>HOME</title>
+      <title>SYP-HOME</title>
       <meta charset="utf-8">
   </head>
   <body>
 <center>
-    <h1>Navigation</h1>
+    <h1>Save Your Photos</h1>
     <ul>
       <p><button><a href="index.php">file Upload</a></button></p>
       <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
