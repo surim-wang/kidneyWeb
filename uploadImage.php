@@ -32,7 +32,13 @@ if(isset($_POST['Upload']))
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
         <li><a href="home.php"><button>home</button></a></li>
-        <li><a href="imageShow.php"><button>imageList</button></a></li>
-        <li><a href="imageOpen.php"><button>Show image</button></a></li>
+        <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
+
+          <form action = "displayImageOne.php" method="POST" enctype="multipart/form-data">
+            <p><input type="text" name="idNo" placeholder="Enter id number"/>
+            <input type="submit" name="submit" value="show image (Only ONE)"/><br>
+          </form>
+
+        <button><a href="showList.php">image List</a></button>
     </ul>
 </div>
