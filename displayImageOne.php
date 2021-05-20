@@ -18,7 +18,9 @@
           <?php
             $conn = mysqli_connect("localhost", "root", "123456");
             $db = mysqli_select_db($conn, 'opentutorials');
-            $query = "SELECT * FROM `photo` WHERE id = '$idNo'";
+
+            $idNo = $_POST['idNo'];
+            $query = "SELECT * FROM `photo` WHERE id ='$idNo' ";
             $query_run = mysqli_query($conn, $query);
 
             while($row = mysqli_fetch_array($query_run))
@@ -26,13 +28,11 @@
               ?>
               <tr>
                 <td> <?= $row[0] ?> </td>
-                <td> <?= '<img src="data:image;base64,'.base64_encode($row['image']).'" alt ="Image" style="width: 1000px">' ?> </td>
+                <td> <?= '<img src="data:image;base64,'.base64_encode($row['image']).'" alt ="Image" style="width: 530px">' ?> </td>
                 <td> <?= $row['desc'] ?> </td>
               </tr>
-
               <?php
-            }
-           ?>
+            }           ?>
         </table>
       </form></center>
   </body>

@@ -1,23 +1,36 @@
-<?php
+<html>
+  <head>
+    <title>  IMAGE LIST</title>
+    <center>
+    <h1>  IMAGE LIST</h1>
+    </center>
+  </head>
 
-$conn = mysqli_connect("127.0.0.1", "root", "123456");
-$db = mysqli_select_db($conn, 'opentutorials');
+  <body>
+  <center>
+    <?php
+    $conn = mysqli_connect("127.0.0.1", "root", "123456");
+    $db = mysqli_select_db($conn, 'opentutorials');
 
+    $query = "SELECT * FROM photo";
+    $result = mysqli_query($conn, $query);
 
-$query = "SELECT * FROM photo";
-$result = mysqli_query($conn, $query);
+    while($row = mysqli_fetch_array($result)){
+      //print list
+      echo 'image_id : ';
+      print_r($row['id']);
+      echo '<br>';
+    };
+    ?>
+    <div>
+      <p><a href="displayImage.php"><button>SHOW ALL</button></a></p>
+    </div>
 
-while($row = mysqli_fetch_array($result)){
-  //print list
-  echo 'image_id : ';
-  print_r($row['id']);
-  echo '<br>';
+    <form action = "displayImageOne.php" method="POST" enctype="multipart/form-data">
+      <p><input type="text" name="idNo" placeholder="Enter id number"/>
+      <input type="submit" name="submit" value="show image (Only ONE)"/><br>
+    </form>
 
-  //var_dump($row);
-};
-?>
-<div>
-    <ul class="nav navbar-nav">
-        <li><a href="displayImage.php"><button>$row['id']</button></a></li>
-    </ul>
-</div>
+  </center>
+  </body>
+</html>
