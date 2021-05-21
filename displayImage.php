@@ -18,6 +18,8 @@
           <?php
             $conn = mysqli_connect("localhost", "root", "123456");
             $db = mysqli_select_db($conn, 'opentutorials');
+
+
             $query = "SELECT * FROM `photo`";
             $query_run = mysqli_query($conn, $query);
 

@@ -23,8 +23,8 @@
           <?php
             $conn = mysqli_connect("localhost", "root", "123456");
             $db = mysqli_select_db($conn, 'opentutorials');
-
-            $query = "SELECT * FROM `medicalrecords`";
+  $InspectName = $_POST['InspectNameText'];
+            $query = "SELECT * FROM `medicalrecords` WHERE InspectName = '$InspectName'";
             $query_run = mysqli_query($conn, $query);
 
             while($row = mysqli_fetch_array($query_run))

@@ -6,11 +6,16 @@
   </head>
   <body>
 <center>
-    <h1>Save Your Photos & Data</h1>
+    <h1>Save Your Records & Draw a Graph with your data</h1>
     <ul>
       <p><button><a href="index.php">file Upload</a></button></p>
 
       <p><button><a href="table.php">show table</a></button></p>
+
+      <form action = "tableOne.php" method="POST" enctype="multipart/form-data">
+        <p><input type="text" name="InspectNameText" placeholder="Enter InspectName"/>
+        <input type="submit" name="submit" value="Select InspectName"/><br>
+      </form>
 
       <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
 
