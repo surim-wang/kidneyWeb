@@ -6,9 +6,12 @@
   </head>
   <body>
 <center>
-    <h1>Save Your Photos</h1>
+    <h1>Save Your Photos & Data</h1>
     <ul>
       <p><button><a href="index.php">file Upload</a></button></p>
+
+      <p><button><a href="table.php">show table</a></button></p>
+
       <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
 
         <form action = "displayImageOne.php" method="POST" enctype="multipart/form-data">
@@ -17,6 +20,7 @@
         </form>
 
       <button><a href="showList.php">image List</a></button>
+
     </ul>
     </center>
   </body>
