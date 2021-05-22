@@ -23,7 +23,8 @@
           <?php
             $conn = mysqli_connect("localhost", "root", "123456");
             $db = mysqli_select_db($conn, 'opentutorials');
-  $InspectName = $_POST['job'];
+
+            $InspectName = $_POST['job'];
             $query = "SELECT * FROM `medicalrecords` WHERE InspectName = '$InspectName'";
             $query_run = mysqli_query($conn, $query);
 
