@@ -13,7 +13,13 @@
       <p><button><a href="table.php">show table</a></button></p>
 
       <form action = "tableOne.php" method="POST" enctype="multipart/form-data">
-        <p><input type="text" name="InspectNameText" placeholder="Enter InspectName"/>
+        <!--<p><input type="text" name="InspectNameText" placeholder="Enter InspectName"/>-->
+        <select name="job">
+            <option value="WBC">WBC</option>
+            <option value="Hb">Hb</option>
+            <option value="Creat, U">Creat, U</option>
+            <option value="Micro Alb">Micro Alb</option>
+        </select>
         <input type="submit" name="submit" value="Select InspectName"/><br>
       </form>
 
