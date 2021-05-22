@@ -14,13 +14,26 @@
 
       <form action = "tableOne.php" method="POST" enctype="multipart/form-data">
         <!--<p><input type="text" name="InspectNameText" placeholder="Enter InspectName"/>-->
-        
-        <select name="job">
-            <option value="WBC">WBC</option>
-            <option value="Hb">Hb</option>
-            <option value="Creat, U">Creat, U</option>
-            <option value="Micro Alb">Micro Alb</option>
-        </select>
+
+        <?php
+          $conn = mysqli_connect("localhost", "root", "123456");
+          $db = mysqli_select_db($conn, 'opentutorials');
+
+          $query = "SELECT distinct InspectName FROM `medicalrecords` ";
+          $query_run = mysqli_query($conn, $query);
+          ?>
+          <select name="job">
+          <?php
+          while($row = mysqli_fetch_array($query_run))
+          {
+          ?>
+            <option value="Micro Alb"><?=$row[0]?></option>
+          <?php
+          }
+          ?>
+          </select>
+
+
         <input type="submit" name="submit" value="Select InspectName"/><br>
       </form>
 
