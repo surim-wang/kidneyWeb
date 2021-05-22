@@ -14,6 +14,7 @@
 
       <form action = "tableOne.php" method="POST" enctype="multipart/form-data">
         <!--<p><input type="text" name="InspectNameText" placeholder="Enter InspectName"/>-->
+        
         <select name="job">
             <option value="WBC">WBC</option>
             <option value="Hb">Hb</option>
