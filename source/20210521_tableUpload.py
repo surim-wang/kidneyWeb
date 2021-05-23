@@ -12,12 +12,11 @@ import pandas as pd
 import numpy as np
 from glob import glob
 
-data = pd.read_excel('../data/2013-03-11.xlsx')
+data = pd.read_excel('D:/05.Kidney/data/개별데이터/2013-03-11.xlsx')
 column_name = list(data.columns)
 df = pd.DataFrame(columns= column_name)
 
-
-data_lst = glob('../data/*xlsx')
+data_lst = glob('D:/05.Kidney/data/개별데이터/*.xlsx')
 
 for i in data_lst:
     print(i)

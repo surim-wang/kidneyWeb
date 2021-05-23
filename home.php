@@ -19,15 +19,30 @@
           $query = "SELECT distinct InspectName FROM `medicalrecords` ";
           $query_run = mysqli_query($conn, $query);
           ?>
-
             <select name="job">
             <?php while($row = mysqli_fetch_array($query_run)){?>
               <option ><?=$row[0]?></option>
             <?php } ?>
             </select>
-
           <input type="submit" name="submit" value="Select InspectName"/><br>
       </form>
+
+
+      <form action = "graph.php" method="POST" enctype="multipart/form-data">
+        <?php
+          $conn = mysqli_connect("localhost", "root", "123456");
+          $db = mysqli_select_db($conn, 'opentutorials');
+          $query = "SELECT distinct InspectName FROM `medicalrecords` ";
+          $query_run = mysqli_query($conn, $query);
+          ?>
+            <select name="draw">
+            <?php while($row = mysqli_fetch_array($query_run)){?>
+              <option ><?=$row[0]?></option>
+            <?php } ?>
+            </select>
+          <input type="submit" name="submit" value="draw graph with InspectName"/><br>
+      </form>
+
 
       <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
 
