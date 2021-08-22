@@ -1,9 +1,31 @@
+<div>
+      <p><a href="index.php"><button>HOME</button></a></p>
+    </div>
+
+    <form action = "graph.php" method="POST" enctype="multipart/form-data">
+      <?php
+        //$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
+        //$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
+        $conn = mysqli_connect("localhost", "root", "123456");
+        $db = mysqli_select_db($conn, 'opentutorials');
+        $query = "SELECT distinct InspectName FROM `medicalrecords` ";
+        $query_run = mysqli_query($conn, $query);
+        ?>
+          <select name="draw">
+          <?php while($row = mysqli_fetch_array($query_run)){?>
+            <option ><?=$row[0]?></option>
+          <?php } ?>
+          </select>
+        <input type="submit" name="submit" value="draw graph with InspectName"/><br>
+    </form>
+
 <?php
-//$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
-//$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
 $conn = mysqli_connect("127.0.0.1", "root", "123456");
 $db = mysqli_select_db($conn, 'opentutorials');
+
+
 $InspectName = $_POST['draw'];
+//$InspectName = mysqli_fetch_array($query_run)[0];
 $query = "SELECT * FROM `medicalrecords` WHERE InspectName = '$InspectName'";
 $result = mysqli_query($conn, $query);
 ?>
@@ -50,26 +72,7 @@ $result = mysqli_query($conn, $query);
   <body>
     <!--<div id="columnchart_material" style="width: 1350px; height: 700px;"></div>-->
     <div id="curve_chart" style="width: 1350px; height: 500px;"></div>
-    <div>
-      <p><a href="index.php"><button>HOME</button></a></p>
-    </div>
-
-    <form action = "graph.php" method="POST" enctype="multipart/form-data">
-      <?php
-        //$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
-        //$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
-        $conn = mysqli_connect("localhost", "root", "123456");
-        $db = mysqli_select_db($conn, 'opentutorials');
-        $query = "SELECT distinct InspectName FROM `medicalrecords` ";
-        $query_run = mysqli_query($conn, $query);
-        ?>
-          <select name="draw">
-          <?php while($row = mysqli_fetch_array($query_run)){?>
-            <option ><?=$row[0]?></option>
-          <?php } ?>
-          </select>
-        <input type="submit" name="submit" value="draw graph with InspectName"/><br>
-    </form>
+    
 
   </body>
 </html>

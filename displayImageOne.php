@@ -7,7 +7,7 @@
 
     <center>
       <form action="" method="POST" enctype="multipart/form-data">
-        <table>
+        <table border = 1>
           <thead>
             <tr>
               <th>ID</th>
