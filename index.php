@@ -9,11 +9,12 @@
   <body>
     <div class="container">
       <header>
+      <h2>H.AVATA</h2>
       <nav>
           <ul>
             <li><a href="upload.php">FILE UPLOAD</a></li>      <!-- 1  -->
             <li><a href="table.php">TABLES</a></li>           <!-- 2  -->
-            <li><a href="tableOne.php">TABLE</a></li>           <!-- 3  -->
+            <li><a href="table_load.php">TABLE</a></li>           <!-- 3  -->
             <li><a href="graph_load.php">GRAPH</a></li>         <!-- 4  -->
             <li><a href="displayImage.php">IMAGES</a></li>        <!-- 5  -->
             <li><a href="imgOneLoad.php">IMAGE</a></li>         <!-- 6  -->
