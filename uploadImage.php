@@ -1,7 +1,8 @@
 
 
 <?php
-
+//$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
+//$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
 $conn = mysqli_connect("127.0.0.1", "root", "123456");
 $db = mysqli_select_db($conn, 'opentutorials');
 
@@ -29,9 +30,10 @@ if(isset($_POST['Upload']))
   }
 }
 ?>
+
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-        <li><a href="home.php"><button>home</button></a></li>
+        <li><a href="index.php"><button>home</button></a></li>
         <p><button><a href="displayImage.php">show images (ALL)</a></button></p>
 
           <form action = "displayImageOne.php" method="POST" enctype="multipart/form-data">

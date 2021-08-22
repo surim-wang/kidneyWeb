@@ -16,6 +16,9 @@
             </tr>
           </thead>
           <?php
+            //$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
+            //$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
+            
             $conn = mysqli_connect("localhost", "root", "123456");
             $db = mysqli_select_db($conn, 'opentutorials');
 

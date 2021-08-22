@@ -1,4 +1,6 @@
 <?php
+//$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
+//$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
 $conn = mysqli_connect("127.0.0.1", "root", "123456");
 $db = mysqli_select_db($conn, 'opentutorials');
 $InspectName = $_POST['draw'];
@@ -49,11 +51,13 @@ $result = mysqli_query($conn, $query);
     <!--<div id="columnchart_material" style="width: 1350px; height: 700px;"></div>-->
     <div id="curve_chart" style="width: 1350px; height: 500px;"></div>
     <div>
-      <p><a href="home.php"><button>HOME</button></a></p>
+      <p><a href="index.php"><button>HOME</button></a></p>
     </div>
 
     <form action = "graph.php" method="POST" enctype="multipart/form-data">
       <?php
+        //$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
+        //$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
         $conn = mysqli_connect("localhost", "root", "123456");
         $db = mysqli_select_db($conn, 'opentutorials');
         $query = "SELECT distinct InspectName FROM `medicalrecords` ";

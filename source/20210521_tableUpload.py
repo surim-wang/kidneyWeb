@@ -16,11 +16,13 @@ data = pd.read_excel('D:/05.Kidney/data/개별데이터/2013-03-11.xlsx')
 column_name = list(data.columns)
 df = pd.DataFrame(columns= column_name)
 
-data_lst = glob('D:/05.Kidney/data/개별데이터/*.xlsx')
+#data_lst = glob('D:/05.Kidney/data/개별데이터/*.xlsx')
+data_lst = glob('D:/kidney/data/eda_data.csv')
 
 for i in data_lst:
     print(i)
-    dat = pd.read_excel(i)
+    #dat = pd.read_excel(i)
+    dat = pd.read_csv(i)
     df = pd.concat([df, dat])
 
 df.columns
@@ -30,7 +32,11 @@ df.iloc[1406]
 df.iloc[1407]
 #%% DATA INSERT IN TO TABLE (db)
 import pymysql.cursors
-conn = pymysql.connect(host = 'localhost', user = 'root', password = '123456', db = 'opentutorials', charset = 'utf8')
+#local > local db로 데이터 전송
+conn = pymysql.connect(host = 'localhost', user = 'root', password = '123456', db = 'opentutorials', charset = 'utf8') 
+#local > infinityFree db server 전송 : failture 실패 
+#conn = pymysql.connect(host = 'sql205.epizy.com', user = 'epiz_29265313', password = 'ZOkyx8KJmsYtf9u', db = 'epiz_29265313_kidney', charset = 'utf8')
+#conn = pymysql.connect(host = '185.27.134.10', user = 'epiz_29265313', password = 'ZOkyx8KJmsYtf9u', db = 'epiz_29265313_kidney', charset = 'utf8')
 curs = conn.cursor()
 
 for i in range(len(df)):
