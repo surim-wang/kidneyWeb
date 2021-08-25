@@ -4,7 +4,9 @@
 
   </head>
   <body>
-
+    <div>
+      <p><a href="index.php"><button>HOME</button></a></p>
+    </div>
     <center>
       <form action="" method="POST" enctype="multipart/form-data">
         <table border = '1'>

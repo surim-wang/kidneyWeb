@@ -1,6 +1,7 @@
 <html>
-
+    
 <!-- 선택 버튼 만들기 -->
+
           <form action = "tableOne.php" method="POST" enctype="multipart/form-data">
         <?php
           $conn = mysqli_connect("localhost", "root", "123456"); // "sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"

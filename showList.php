@@ -1,13 +1,14 @@
 <html>
   <head>
     <title>  IMAGE LIST</title>
-    <center>
-    <h1>  IMAGE LIST</h1>
-    </center>
   </head>
 
-  <body>
+<body>
+  
     <center>
+    <div>
+      <p><a href="index.php"><button>HOME</button></a></p>
+    </div>
       <?php
       //$conn = mysqli_connect("sql205.epizy.com", "epiz_29265313", "ZOkyx8KJmsYtf9u"); // "localhost", "root", "123456"
       //$db = mysqli_select_db($conn, 'epiz_29265313_kidney'); // 'opentutorials'
