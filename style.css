@@ -1,19 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|ZCOOL+QingKe+HuangYou');
 
-* {
-	margin:0;
+* {	margin:0;
 	padding:0;
 	color:#000;
 	font-family: 'ZCOOL QingKe HuangYou', cursive;
 	box-sizing: border-box;
 }
 
-
 .fn-font {
 	font-family: 'Noto Sans KR', sans-serif;
 }
-
 
 ul {
 	list-style: none;
@@ -25,12 +21,15 @@ a {
 	outline: none;
 }
 
-
 .container {
 	width:1440px;
 	margin:0 auto;
+	
 }
 
+div{
+	
+}
 
 header {
 	width:100%;
@@ -38,6 +37,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color:#ECF3F3;
 }
   
 
@@ -45,20 +45,20 @@ header > h2 {
 	margin-left:20px;
 }
 
-
-
 header > nav {
 	width:600px;
 	height:100%;
+	margin-right:20px;
 }
-/*
+
+
 header ul {
 	width:100%;
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
 }
-*/
+
 
 header ul > li {
 	font-size:20px;
@@ -66,6 +66,7 @@ header ul > li {
 	display: flex;
 	align-items: center;
 } 
+
 
 
 

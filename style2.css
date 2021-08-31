@@ -1,11 +1,66 @@
-header ul {
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|ZCOOL+QingKe+HuangYou');
+
+* {	margin:0;
+	padding:0;
+	color:#000;
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+	box-sizing: border-box;
+}
+
+.fn-font {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+	list-style: none; /* 밑줄 사라짐 */
+}
+
+
+a {
+	text-decoration: none; /* 밑줄 사라짐 */
+	outline: none; /* 변화 없음 */
+}
+
+.container { /* 왼쪽 여백 생김 */
+	width:1440px;
+	margin:0 auto;
+}
+
+
+header {
 	width:100%;
-	height: 10%;
-	display: flex;
-	justify-content: space-between;
+	height:80px;
+	background-color:#ECF3F3;
+	display: flex; /* 한줄로 정리 됨 */
+	align-items: center; /* 세로 중앙 정렬 됨 */
+	justify-content: space-between; /* 양쪽으로 나눠서 정리 됨*/	
+}
+
+
+header > h2 {
+	margin-left:20px; /* 왼쪽에 여백 생김 */
 }
 
 header > nav {
-	width:600px;
-	height:100%;
+	width:600px; /* nav의 가로 길이가 600 픽셀로 됨.*/
+	height:100%; /* 가로 600 세로 112 > 80(hedaer의 높이) 으로 정리됨 */
 }
+
+
+header ul {
+	width:100%;
+	height: 100%; /* 80으로 맞춰짐 */
+	display: flex; /* 한줄로 정리됨.*/
+	justify-content: space-between; /*간격을 벌려서 정리 됨*/
+}
+
+
+header ul > li {
+	font-size:20px; /* ul > li 의 폰트가 수정됨 */
+	height: 100%;  /* 변화 없음 */
+	display: flex; /* 변화 없음 */
+	align-items: center; /* 가운데 정렬 됨*/
+} 
+
+
+
